@@ -4,4 +4,6 @@ lc util code
 
 * 差分数组 Difference
 
+* 并查集 UnionFind
+
 
