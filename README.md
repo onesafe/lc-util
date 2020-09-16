@@ -6,4 +6,6 @@ lc util code
 
 * 并查集 UnionFind
 
+* 二分查找 BinarySearch
+
 
