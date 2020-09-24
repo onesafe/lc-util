@@ -1,3 +1,5 @@
+import java.util.List;
+
 /**
  * Author: 第九代封妖师
  * Date: 2020/09/16
@@ -14,7 +16,7 @@ public class Utils {
     };
 
     // 求阶乘n!
-    public int fact(int n) {
+    public static int fact(int n) {
         int res = 1;
         for(int i=1; i<=n; i++) {
             res *= i;
@@ -23,7 +25,11 @@ public class Utils {
     }
 
     // 从n里面选k个不重复的组合数
-    public int compose(int n, int k) {
+    public static int compose(int n, int k) {
         return fact(n) / (fact(n-k)*fact(k));
+    }
+
+    public static int[] listToArray(List<Integer> list) {
+        return list.stream().mapToInt(Integer::valueOf).toArray();
     }
 }
