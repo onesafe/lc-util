@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * Author: 第九代封妖师
  * Date: 2020/09/16
@@ -67,5 +69,40 @@ public class BinarySearch {
         if (right < 0 || nums[right] != target)
             return -1;
         return right;
+    }
+
+    /**
+     * 5556
+     * 0到无穷，找满足条件的点
+     *
+     * [0, n] 中找[0, mid] 的mid点，满足check，找到最远的mid点
+     */
+    public int furthestBuilding(int[] h, int b, int la) {
+        int n = h.length;
+        int l = 0;
+        int r = n;
+        int[] buf = new int[n];
+        while(l < r){
+            int m = (l + r + 1) / 2;
+            if(check(h, buf, m, b, la)){
+                l = m;
+            }else{
+                r = m - 1;
+            }
+        }
+        return l - 1;
+    }
+
+    public boolean check(int[] h, int[] buf, int mid, int b, int l){
+        buf[0] = 0;
+        for(int i = 1; i < mid; i++){
+            buf[i] = Math.max(0, h[i] - h[i - 1]);
+        }
+        Arrays.sort(buf, 0, mid);
+        long sum = 0;
+        for(int i = 0; i < mid - l; i++){
+            sum += buf[i];
+        }
+        return sum <= b;
     }
 }
