@@ -1,4 +1,4 @@
-package week.Normal285;
+package week.normal.normal285;
 
 public class L6028 {
     public int countCollisions(String directions) {

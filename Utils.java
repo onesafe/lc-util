@@ -24,6 +24,14 @@ public class Utils {
         return res;
     }
 
+    // 是否质数
+    private boolean isPrimeNum(int n) {
+        for(int i=n==2?3:2; i<=Math.sqrt(n)+1; i++) {
+            if(n%i == 0) return false;
+        }
+        return true;
+    }
+
     // 从n里面选k个不重复的组合数
     public static int compose(int n, int k) {
         return fact(n) / (fact(n-k)*fact(k));

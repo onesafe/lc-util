@@ -1,4 +1,4 @@
-package week.Night74;
+package week.night.night74;
 
 import java.math.BigDecimal;
 import java.util.Comparator;

@@ -1,4 +1,4 @@
-package week.Night74;
+package week.night.night74;
 
 /**
  * 贪心

@@ -1,4 +1,4 @@
-package week.Normal285;
+package week.normal.normal285;
 
 import java.util.ArrayList;
 import java.util.List;
