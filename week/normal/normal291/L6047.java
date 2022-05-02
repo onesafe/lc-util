@@ -1,4 +1,4 @@
-package week.normal.normal191;
+package week.normal.normal291;
 
 public class L6047 {
     public String removeDigit(String number, char digit) {
